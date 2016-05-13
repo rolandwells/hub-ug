@@ -1,0 +1,16 @@
+# Installation below will set-up multiseat as well as gnome-shell
+# This is for the boards ASROCK IMB-154
+# http://www.asrock.com/ipc/overview.asp?Model=IMB-154
+
+
+
+# Setup Multiseat
+mkdir -p /etc/lightdm/lightdm.conf.d
+cp 50-hub.conf /etc/lightdm/lightdm.conf.d/
+cp 99-multiseat.rules /etc/udev/rules.d/
+apt-add-repository ppa:ubuntu-multiseat/ppa
+apt-get update
+apt-get upgrade
+apt-get install gnome-shell
+apt-get purge gdm3
+
