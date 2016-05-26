@@ -1,0 +1,3 @@
+#!/bin/sh
+/usr/bin/sudo -H -u hello /bin/sh -c '/bin/kill killall -KILL autossh'
+/usr/bin/sudo -H -u hello /bin/sh -c '/usr/bin/autossh -f -M 39999 -R 39990:localhost:22 -N -i /home/hello/.ssh/id_rsa uganda@hellohub.org'
